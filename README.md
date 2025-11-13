@@ -59,16 +59,21 @@ Le modèle prend en entrée des images de taille normalisée et produit en sorti
 
 ## Paramètres d’entraînement du modèle
 **Compilation du modèle**
+
 Le modèle a été compilé avec les paramètres suivants :
 - Optimiseur : Adam avec un learning rate de 1e-4, connu pour sa stabilité et sa capacité à bien s’adapter pendant l’entraînement.
 - Fonction de perte : categorical_crossentropy, adaptée à un problème de classification multi-classes.
 - Métrique de suivi : accuracy (taux de précision).
+  
 **Callbacks utilisés**
+
 Deux callbacks ont été utilisés pour optimiser l’apprentissage :
 - EarlyStopping : interrompt l’entraînement lorsque la perte de validation ne s’améliore plus pendant 10 époques, tout en restaurant les meilleurs poids du modèle.
 - ReduceLROnPlateau : réduit le taux d’apprentissage de 80 % si la perte de validation stagne sur 5 époques consécutives.
 → Cela permet d’éviter le surapprentissage et d’améliorer la convergence.
+
 **Processus d’entraînement**
+
 - Batch size : 32
 - Nombre maximal d’époques : 100
 - Augmentation de données activée (rotation, zoom, flips, etc.)
