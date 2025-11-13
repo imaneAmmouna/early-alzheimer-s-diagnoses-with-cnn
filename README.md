@@ -23,7 +23,7 @@ La progression d’Alzheimer est généralement divisée en quatre stades princi
 - Perte importante de mémoire et des fonctions cognitives.
 - Incapacité à reconnaître des proches, troubles du langage et dépendance totale pour les activités de la vie quotidienne.
 <p align="center">
-  <img src="Alzheimer_diagnoses.JPG" alt="Alzheimer Diagnoses" width="400">
+  <img src="Alzheimer_diagnosis.JPG" alt="Alzheimer Diagnoses" width="400">
 </p>
 **3. Importance du diagnostic précoce**
 Détecter la maladie avant l’apparition des symptômes sévères permet :
@@ -58,4 +58,29 @@ Pour la détection et la classification des stades de la maladie d’Alzheimer, 
 Le modèle prend en entrée des images de taille normalisée et produit en sortie une prédiction multi-classes correspondant aux différents stades d’Alzheimer (Non, Very Mild, Mild, Moderate).
 
 ## Paramètres d’entraînement du modèle
+**Compilation du modèle**
+Le modèle a été compilé avec les paramètres suivants :
+- Optimiseur : Adam avec un learning rate de 1e-4, connu pour sa stabilité et sa capacité à bien s’adapter pendant l’entraînement.
+- Fonction de perte : categorical_crossentropy, adaptée à un problème de classification multi-classes.
+- Métrique de suivi : accuracy (taux de précision).
+**Callbacks utilisés**
+Deux callbacks ont été utilisés pour optimiser l’apprentissage :
+- EarlyStopping : interrompt l’entraînement lorsque la perte de validation ne s’améliore plus pendant 10 époques, tout en restaurant les meilleurs poids du modèle.
+- ReduceLROnPlateau : réduit le taux d’apprentissage de 80 % si la perte de validation stagne sur 5 époques consécutives.
+→ Cela permet d’éviter le surapprentissage et d’améliorer la convergence.
+**Processus d’entraînement**
+- Batch size : 32
+- Nombre maximal d’époques : 100
+- Augmentation de données activée (rotation, zoom, flips, etc.)
+- Jeu de validation : 20 % des données totales
+
 ## Évaluation du modèle
+- Les premières époques montrent une progression lente (acc ~0.30 → 0.70).
+- À partir de la 15ᵉ époque, le modèle atteint une stabilité notable avec des val_loss en baisse continue.
+- Le ReduceLROnPlateau a réduit progressivement le learning rate à 2e-5, puis 4e-6, améliorant la précision.
+
+## Résultats finaux
+Après 82 époques (avant arrêt anticipé) :
+- Précision d’entraînement (accuracy) : ≈ 96 %
+- Précision de validation (val_accuracy) : ≈ 96 %
+- Perte de validation (val_loss) : ≈ 0.08
