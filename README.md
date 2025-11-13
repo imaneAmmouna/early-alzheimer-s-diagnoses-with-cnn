@@ -4,27 +4,36 @@ La maladie d’Alzheimer est une maladie neurodégénérative progressive qui af
 <p align="center">
   <img src="Alzheimer.JPG" alt="IRM Alzheimer" width="400">
 </p>
+
 **1. Physiopathologie**
+
 - Accumulation anormale de protéines bêta-amyloïdes formant des plaques dans le cerveau.
 - Formation de dégénérescences neurofibrillaires dues à la protéine tau.
 - Ces anomalies entraînent la mort des neurones et une réduction du volume cérébral, particulièrement dans l’hippocampe et le cortex.
+
 **2. Stades de la maladie**
+
 La progression d’Alzheimer est généralement divisée en quatre stades principaux :
+
 *a. Aucun déficit (No Impairment)*
 - Pas de symptômes cliniques.
 - Fonction cognitive normale.
+  
 *b. Troubles très légers (Very Mild Impairment)*
 - Oublis occasionnels de mots ou d’objets.
 - Légère perte de mémoire à court terme, souvent confondue avec le vieillissement normal.
+  
 *c. Troubles légers à modérés (Mild/Moderate Impairment)*
 - Difficultés croissantes pour accomplir des tâches quotidiennes (gestion de finances, organisation).
 - Oublis plus fréquents, désorientation spatiale et temporelle.
+  
 *d. Troubles sévères (Severe Impairment)*
 - Perte importante de mémoire et des fonctions cognitives.
 - Incapacité à reconnaître des proches, troubles du langage et dépendance totale pour les activités de la vie quotidienne.
 <p align="center">
   <img src="Alzheimer_diagnosis.JPG" alt="Alzheimer Diagnoses" width="400">
 </p>
+
 **3. Importance du diagnostic précoce**
 Détecter la maladie avant l’apparition des symptômes sévères permet :
 - Une meilleure gestion clinique et thérapeutique.
